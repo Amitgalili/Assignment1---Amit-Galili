@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Indie Music Festival</h1>
+    <ul>
+        <li><a href="Assignment 1.html">Home</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+    </ul>
+    <header>
+        <h2>Purchase Tickets</h2>
+        <p>Fill out the form to order your pass. Fields marked with * are required.</p>
+        <form action="/signup" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Buyer Information</legend>
+                <div>
+                    <label for="name">Full name: *</label>
+                    <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+                </div>
+                <div>
+                    <label for="email">Email: *</label>
+                    <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Order Details</legend>
+                <div>
+                    <label for="Ticket Type">Ticket Type</label>
+                    <select name="Ticket Type" required>
+                        <option value="1d">Day 1</option>
+                        <option value="2d">Day 2</option>
+                        <option value="3d">Day 3</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="checkbox" name="Camping" value="camping">
+                    <label for="camping">Camping</label>
+                    <input type="checkbox" name="Merch Bundle" id="merch bundle">
+                    <label for="merch bundle">Merch Bundle</label>
+                </div>
+                <div>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="9" value="1">
+                </div>
+                <div>
+                    <label for="notes">Notes</label>
+                    <textarea name="notes" rows="4" maxlength="500" placeholder="Any special requests?"></textarea>
+                </div>
+            </fieldset>
+            <div>
+                <button type="submit">Place Order</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        <hr>
+        <h2>Simple Price Table</h2>
+        <table border="">
+        <thead>
+            <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Price (USD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">Day Pass</td>
+                <td scope="row">59</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td scope="row">Full Festival</td>
+                <td scope="row">149</td>
+            </tr>
+        </tbody>
+        </table>
+        <div>
+            <p><em>Tip: </em> Check the <a href="artists.html">artist list</a> before choosing your day</p>
+        </div>
+        <div>
+            Questions? Email us anytime.
+        </div>
+</body>
+</html>
